@@ -26,7 +26,9 @@ a.authenticate()
 friends = a.getFriends()
 for f in friends:
     print("Downloading {:20} {}".format(f.username+"'s thumbnail:", f.currentAvatarImageUrl))
-    ret = requests.get(f.currentAvatarImageUrl)
+    ret = requests.get(
+        f.currentAvatarImageUrl,
+        headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'})
     assert ret.status_code == 200
 
     with open(os.path.join(DIR, "{}.png".format(f.username)), "wb") as f:
