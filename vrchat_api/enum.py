@@ -20,6 +20,7 @@ class Status(Enum):
     JOIN_ME = 1
     BUSY    = 2
     OFFLINE = 3
+    ASK_ME = 4
 
     @staticmethod
     def fromString(status):
@@ -27,6 +28,7 @@ class Status(Enum):
             "active":  Status.ACTIVE,
             "join me": Status.JOIN_ME,
             "busy":    Status.BUSY,
+            "ask me":  Status.ASK_ME,
             "offline": Status.OFFLINE
         }[status]
 
@@ -48,6 +50,8 @@ class ModerationType(Enum):
     UNMUTE  = 1
     BLOCK   = 2
     UNBLOCK = 3
+    HIDEAVATAR = 4
+    SHOWAVATAR = 5
 
     @staticmethod
     def fromString(moderationType):
@@ -55,5 +59,7 @@ class ModerationType(Enum):
             "mute":    ModerationType.MUTE,
             "unmute":  ModerationType.UNMUTE,
             "block":   ModerationType.BLOCK,
+            "hideAvatar":   ModerationType.HIDEAVATAR,
+            "showAvatar": ModerationType.SHOWAVATAR,
             "unblock": ModerationType.UNBLOCK
         }[moderationType]
