@@ -1,5 +1,5 @@
 # Updated
-I updated the api to support the updated vrchat api so it will no longer through an error 403 when calling the api
+I updated the api to support the updated vrchat api so it will no longer throw an error 403 when calling the api
 
 # vrchat-api-python
 This is an unofficial Python library for the [VRChat API](https://vrchatapi.github.io/#/).
